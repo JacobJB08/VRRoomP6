@@ -4,15 +4,14 @@ using UnityEngine;
 
 public class RotateRectical : MonoBehaviour
 {
-    public GameObject self;
-    public float spinSpeed;
+    public float spinSpeed = 30;
 
     private void Start()
     {
-
-    }
-    private void FixedUpdate()
-    {
         
+    }
+    private void Update()
+    {
+       transform.Rotate(transform.up, spinSpeed * Time.deltaTime);
     }
 }
